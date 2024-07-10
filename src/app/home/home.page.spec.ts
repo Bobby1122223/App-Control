@@ -1,24 +1,38 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+.content-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-import { HomePage } from './home.page';
+.button-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: #fff; 
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
 
-describe('HomePage', () => {
-  let component: HomePage;
-  let fixture: ComponentFixture<HomePage>;
+ion-button.red {
+  --background: red;
+  --color: white;
+}
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [HomePage],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+ion-button.yellow {
+  --background: yellow;
+  --color: black;
+}
 
-    fixture = TestBed.createComponent(HomePage);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+ion-button.green {
+  --background: green;
+  --color: white;
+}
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+ion-button.off {
+  --background: grey;
+  --color: white;
+}
